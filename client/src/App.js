@@ -1,24 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
 import Weather from './components/Weather'
 
+import Sun from './assets/sun.svg';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
+      <img src={Sun} className="App-logo" alt="logo" />
         <Weather />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }

@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { gql } from '@apollo/client'
 import { client } from '../index'
 
+import './Weather.css'
+// import Sun from '../assets/sun.svg';
+
 function Weather() {
   const [zip, setZip] = useState('')
   const [weather, setWeather ] = useState('')
@@ -26,18 +29,21 @@ function Weather() {
   return (
     <div className="Weather">
 
-      {weather ? <h1>{weather.data.getWeather.temperature}</h1> : null}
+
 
       <form onSubmit={(e) => {
         e.preventDefault()
         getWeather()
       }}>
-        <input
+        <input className="textField"
+          type="text"
           value={zip}
           onChange={(e) => setZip(e.target.value)}
         />
         <button type="submit">Submit</button>
       </form>
+
+      {weather ? <h1>{weather.data.getWeather.temperature}</h1> : null}
     </div>
   )
 }
