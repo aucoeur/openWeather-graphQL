@@ -1,0 +1,23 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    margin: 0.5em 0 0;
+    filter: brightness(0.9);
+}
+
+th {
+    text-align: center;
+}
+
+td:first-child {
+    text-align: right;
+    filter: brightness(0.8);
+    padding: 0 0.25em;
+}
+
+td:last-child {
+    text-align: left;
+    padding: 0 0.25em;
+}

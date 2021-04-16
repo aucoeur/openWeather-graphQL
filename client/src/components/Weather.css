@@ -13,11 +13,20 @@ input, button {
     border: 0 transparent solid;
 }
 
+.radio {
+    margin-top: 0.25em;
+}
+
+label {
+    padding: 0 0.5em 0 0.15em;
+    font-size: 0.85em;
+}
+
 button {
     background-color: rgb(0, 67, 139);
     color: white;
 }
 
 button:hover {
-    filter: brightness(0.8);
+    background-color: rgba(0, 67, 139, 0.8);
 }

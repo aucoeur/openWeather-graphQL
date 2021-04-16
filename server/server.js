@@ -12,6 +12,7 @@ const schema = buildSchema(`
   }
 
   type Weather {
+    location: String
     temperature: Float
     description: String
     feelsLike: Float
@@ -46,12 +47,14 @@ const root = {
 
       const temperature = json.main.temp
       const description = json.weather[0].description
-      const feelsLike = json.weather[0].feels_like
-      const tempMin = json.weather[0].tempMin
-      const tempMax = json.weather[0].tempMax
+      const feelsLike = json.main.feels_like
+      const tempMin = json.main.temp_min
+      const tempMax = json.main.temp_max
+      const locationName = json.name
 
       return {
         temperature: temperature,
+        location: locationName,
         description: description,
         feelsLike: feelsLike,
         tempMin: tempMin,
